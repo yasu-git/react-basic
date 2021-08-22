@@ -1,0 +1,26 @@
+import React, { useState, useEffect } from 'react'
+
+const BasicUseEffect = () => {
+
+    const [count, setCount] = useState(0)
+    const [item, setItem] = useState('')
+
+    /*
+    読み込みされたときと
+    イベントが動作したときに処理される
+//, []と第2引数を設定した内容の時だけ動作する
+
+    */
+    useEffect(() => {
+        console.log("useEffect invoked")
+
+    }, [count])
+    return (
+        <div>
+            <button onClick={() => setCount(prevCount => prevCount + 1)}>Click {count}</button>
+            <input type='text' value={item} onChange={evt => setItem(evt.target.value)} />
+        </div>
+    )
+}
+
+export default BasicUseEffect
