@@ -11,6 +11,7 @@ import B from './components/B';
 import BasicReducer from './components/BasicReducer';
 import CompB from './components/CompB';
 import React, { useReducer } from 'react';
+import Memo from './components/Memo';
 
 const initialState = 0
 
@@ -48,8 +49,10 @@ function App() {
           {/* <ApiFetch />
           <B /> */}
           {/* <BasicReducer /> */}
-          Count {count}
-          <CompB />
+          {/* Count {count}
+          <CompB /> */}
+
+          <Memo />
 
         </header>
       </div>
