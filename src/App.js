@@ -6,6 +6,7 @@ import './App.css';
 // import BasicUseEffect from './components/BasicUseEffect';
 // import TimerContainer from './components/TimerContainer';
 import ApiFetch from './components/ApiFetch';
+import AppContext from './components/AppContext';
 
 function App() {
   return (
