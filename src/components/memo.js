@@ -13,20 +13,27 @@ const Memo = () => {
         setCount2(prevCount2 => prevCount2 + 1)
     }
 
-    const isOdd = () => {
+    // const isOdd = () => {
+    //     let i = 0
+    //     while (i < 500000000) {
+    //         i++
+    //         return count1 % 2 !== 0
+    //     }
+    // }
+
+    const isOdd = useMemo(() => {
         let i = 0
         while (i < 500000000) {
             i++
             return count1 % 2 !== 0
         }
-
-    }
+    }, [count1])
 
     return (
         <div>
             <button onClick={AddCount1}>Count1: {count1}</button>
             <br />
-            <span>{isOdd() ? 'Odd number' : 'Even number'}</span>
+            <span>{isOdd ? 'Odd number' : 'Even number'}</span>
             <br />
             <button onClick={AddCount2}>Count2: {count2}</button>
         </div>

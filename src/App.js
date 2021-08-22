@@ -36,6 +36,17 @@ function App() {
 
   const [count, dispatch] = useReducer(reducer, initialState)
 
+  const [count1, setCount1] = useState(0)
+  const [count2, setCount2] = useState(0)
+
+  const AddCount1 = () => {
+    setCount1(prevCount1 => prevCount1 + 1)
+  }
+
+  const AddCount2 = () => {
+    setCount2(prevCount2 => prevCount2 + 1)
+  }
+
   return (
     //
     <AppContext.Provider value={{ countProvided: count, dispatchProvided: dispatch }}>
