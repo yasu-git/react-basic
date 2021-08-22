@@ -11,6 +11,7 @@ import B from './components/B';
 
 function App() {
   return (
+    //
     <AppContext.Provider value={'value from App.js'}>
       <div className="App">
         <header className="App-header">
