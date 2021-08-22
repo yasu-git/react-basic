@@ -10,17 +10,20 @@ import AppContext from './components/AppContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <Basic2 /> */}
-        {/* <BasicUseEffect /> */}
-        {/* <TimerContainer /> */}
+    <AppContext.Provider value={'value from App.js'}>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          {/* <Basic2 /> */}
+          {/* <BasicUseEffect /> */}
+          {/* <TimerContainer /> */}
 
-        <ApiFetch />
+          <ApiFetch />
 
-      </header>
-    </div>
+        </header>
+      </div>
+    </AppContext.Provider>
+
   );
 }
 
